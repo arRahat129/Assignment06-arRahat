@@ -1,10 +1,13 @@
 import './App.css'
+import Hero from './component/Navbar/HomePage/Hero/Hero'
+import Navbar from './component/Navbar/Navbar'
 
 function App() {
 
   return (
     <>
-      <h2 className='text-red-600'>Welcome to React</h2>
+      <Navbar />
+      <Hero />
     </>
   )
 }
