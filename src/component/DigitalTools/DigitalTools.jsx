@@ -1,12 +1,11 @@
-import React, { use, useState } from 'react';
+import React, { use } from 'react';
 import Products from '../Products/Products';
 import Cart from '../Cart/Cart';
 
-const DigitalTools = ({ productsPromise, cartItems, setCartItems }) => {
-    const [active, setActive] = useState("products");
+const DigitalTools = ({ productsPromise, active, setActive, cartItems, activeProductId, handleAddToCart }) => {
 
     const products = use(productsPromise);
-    console.log(products);
+    // console.log(products);
 
     return (
         <div className='container mx-auto max-w-400 mb-15'>
@@ -16,20 +15,29 @@ const DigitalTools = ({ productsPromise, cartItems, setCartItems }) => {
                 <div className='flex justify-center items-center'>
                     <div className='flex gap-2 border border-gray-200 w-fit p-1 rounded-full'>
                         <button
-                        onClick={() => setActive("products")}
-                        className={`btn ${active === "products" ? "bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white rounded-full" : "bg-white text-[#25065D] border-none"}`}>
-                            products
+                            onClick={() => setActive("products")}
+                            className={`btn ${active === "products" ? "bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white rounded-full" : "bg-white text-[#25065D] border-none"}`}>
+                            Products
                         </button>
+
                         <button
-                        onClick={() => setActive("cart")}
-                        className={`btn ${active === "cart" ? "bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white rounded-full" : "bg-white text-[#25065D] border-none"}`}>
-                            Cart (2)
+                            onClick={() => setActive("cart")}
+                            className={`btn ${active === "cart" ? "bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white rounded-full" : "bg-white text-[#25065D] border-none"}`}>
+                            Cart ({cartItems.length})
                         </button>
                     </div>
                 </div>
 
                 <div className='mt-5'>
-                    {active === "products" ? <Products products={products} /> : <Cart cartItems={cartItems} />}
+                    {active === "products"
+                        ? <Products 
+                            products={products}
+                            cartItems={cartItems}
+                            handleAddToCart={handleAddToCart}
+                            activeProductId={activeProductId} 
+                            />
+                        : <Cart cartItems={cartItems} />
+                    }
                 </div>
             </div>
         </div>

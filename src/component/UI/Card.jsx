@@ -2,17 +2,19 @@ import React, { useState } from 'react';
 import { toast } from 'react-toastify';
 
 
-const Card = ({ product }) => {
-    const [isAdded, setIsAdded] = useState(false);
+const Card = ({ product, cartItems, handleAddToCart, activeProductId }) => {
+    const isAdded = activeProductId === product.id;
 
     const addToCart = () => {
+        const exists = cartItems.find(item => item.id === product.id);
+
         // alert(`Added ${product.name} to cart!`);
-        if(isAdded){
+        if(exists){
             toast.error(`${product.name} is already in the cart!`);
             return;
         }
         else{
-            setIsAdded(true);
+            handleAddToCart(product);
             toast.success(`${product.name} added to cart!`);
         }
     }

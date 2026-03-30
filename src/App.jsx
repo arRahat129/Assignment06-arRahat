@@ -5,7 +5,7 @@ import Navbar from './component/Navbar/Navbar'
 import DigitalTools from './component/DigitalTools/DigitalTools'
 import { Suspense, useState } from 'react'
 
-const fetchProducts = async() => {
+const fetchProducts = async () => {
   const res = await fetch("/productsData.json");
   return res.json();
 };
@@ -13,7 +13,23 @@ const fetchProducts = async() => {
 function App() {
   const productsPromise = fetchProducts();
 
+  const [active, setActive] = useState("products");
+  const [activeProductId, setActiveProductId] = useState(null);
+
   const [cartItems, setCartItems] = useState([]);
+
+  const handleAddToCart = (product) => {
+    setCartItems(currentItems => {
+      const exists = currentItems.find(item => item.id === product.id);
+      if (exists) {
+        return currentItems;
+      }
+
+      return [...currentItems, product];
+    })
+
+    setActiveProductId(product.id);
+  }
 
   return (
     <>
@@ -21,7 +37,13 @@ function App() {
       <Hero />
       <Statistics />
       <Suspense fallback={<span className="loading loading-spinner loading-xl flex justify-center"></span>}>
-        <DigitalTools productsPromise={productsPromise} cartItems={cartItems} setCartItems={setCartItems} />
+        <DigitalTools 
+          productsPromise={productsPromise}
+          active={active}
+          setActive={setActive}
+          cartItems={cartItems}
+          activeProductId={activeProductId}
+          handleAddToCart={handleAddToCart} />
       </Suspense>
     </>
   )
