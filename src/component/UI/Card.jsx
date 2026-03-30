@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 
 const Card = ({ product }) => {
+    const [isAdded, setIsAdded] = useState(false);
 
     const addToCart = () => {
-        // Implement add to cart functionality here
-        alert(`Added ${product.name} to cart!`);
+        // alert(`Added ${product.name} to cart!`);
+        setIsAdded(true);
     }
 
     return (
@@ -35,9 +36,19 @@ const Card = ({ product }) => {
                         }
                     </ul>
                     <div className="mt-6">
-                        <button
+                        {
+                            isAdded ? <button
                         onClick={() => addToCart()}
-                        className="btn bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white rounded-full py-6 btn-block">Buy Now</button>
+                        className="btn bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white rounded-full py-6 btn-block">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="size-6 me-2 inline-block text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>
+                            Added to Cart
+                        </button>
+                        : <button
+                        onClick={() => addToCart()}
+                        className="btn bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white rounded-full py-6 btn-block">
+                            Buy Now
+                        </button>
+                        }
                     </div>
                 </div>
             </div>
