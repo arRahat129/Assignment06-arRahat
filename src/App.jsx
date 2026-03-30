@@ -33,7 +33,7 @@ function App() {
 
   return (
     <>
-      <Navbar />
+      <Navbar cartItems={cartItems} setActive={setActive} />
       <Hero />
       <Statistics />
       <Suspense fallback={<span className="loading loading-spinner loading-xl flex justify-center"></span>}>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { IoCartOutline } from 'react-icons/io5';
 
-const Navbar = () => {
+const Navbar = ({ cartItems, setActive }) => {
     return (
         <div className='container mx-auto max-w-450 mb-15'>
             <div className="navbar bg-base-100 shadow-sm px-2 sm:px-5 md:px-10 lg:px-25 xl:px-50">
@@ -33,7 +33,14 @@ const Navbar = () => {
                 </div>
                 <div className="navbar-end">
                     <div className='flex gap-4 items-center'>
-                        <IoCartOutline className='font-semibold text-[#101727]' />
+                        <div className='relative cursor-pointer' onClick={() => setActive("cart")}>
+                            {
+                                cartItems.length > 0 
+                                    ? <span className='absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center'>{cartItems.length}</span>
+                                    : null
+                            }
+                            <IoCartOutline className='text-2xl font-semibold text-[#101727]' />
+                        </div>
                         <p className='font-semibold text-[#101727]'><a href="">Login</a></p>
                         <a className="btn bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white rounded-full">Get Started</a>
                     </div>
