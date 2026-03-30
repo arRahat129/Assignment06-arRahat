@@ -1,0 +1,122 @@
+[
+    {
+        "id": 1,
+        "name": "Resume Builder Pro",
+        "description": "Create professional resumes with AI-powered suggestions.",
+        "price": 19,
+        "period": "monthly",
+        "tag": "Popular",
+        "tagType": "popular",
+        "features": [
+            "100+ templates",
+            "ATS optimization",
+            "Export to PDF"
+        ],
+        "icon": "../src/assets/products/design-tool.png"
+    },
+    {
+        "id": 2,
+        "name": "Portfolio Website Kit",
+        "description": "Launch a stunning personal portfolio in minutes.",
+        "price": 49,
+        "period": "one-time",
+        "tag": "Best Seller",
+        "tagType": "best-seller",
+        "features": [
+            "Responsive design",
+            "Custom domains",
+            "SEO optimized"
+        ],
+        "icon": "../src/assets/products/design-tool.png"
+    },
+    {
+        "id": 3,
+        "name": "Social Media Scheduler",
+        "description": "Schedule and manage posts across all platforms.",
+        "price": 15,
+        "period": "monthly",
+        "tag": "New",
+        "tagType": "new",
+        "features": [
+            "Auto posting",
+            "Analytics dashboard",
+            "Multi-platform support"
+        ],
+        "icon": "../src/assets/products/design-tool.png"
+    },
+    {
+        "id": 4,
+        "name": "Design Assets Bundle",
+        "description": "Access thousands of premium UI/UX assets.",
+        "price": 79,
+        "period": "one-time",
+        "tag": "Popular",
+        "tagType": "popular",
+        "features": [
+            "Icons & illustrations",
+            "Figma files",
+            "Unlimited downloads"
+        ],
+        "icon": "../src/assets/products/design-tool.png"
+    },
+    {
+        "id": 5,
+        "name": "AI Content Generator",
+        "description": "Generate blogs, ads, and copy using AI.",
+        "price": 25,
+        "period": "monthly",
+        "tag": "Best Seller",
+        "tagType": "best-seller",
+        "features": [
+            "Blog writing",
+            "Ad copy generation",
+            "SEO suggestions"
+        ],
+        "icon": "../src/assets/products/design-tool.png"
+    },
+    {
+        "id": 6,
+        "name": "Email Marketing Suite",
+        "description": "Build and automate email campaigns easily.",
+        "price": 29,
+        "period": "monthly",
+        "tag": "Popular",
+        "tagType": "popular",
+        "features": [
+            "Drag & drop builder",
+            "Automation flows",
+            "Subscriber analytics"
+        ],
+        "icon": "../src/assets/products/design-tool.png"
+    },
+    {
+        "id": 7,
+        "name": "Startup Toolkit",
+        "description": "All-in-one resources to launch your startup.",
+        "price": 99,
+        "period": "one-time",
+        "tag": "Best Seller",
+        "tagType": "best-seller",
+        "features": [
+            "Business templates",
+            "Pitch decks",
+            "Legal docs"
+        ],
+        "icon": "../src/assets/products/design-tool.png"
+    },
+    {
+        "id": 8,
+        "name": "Productivity Planner App",
+        "description": "Plan your day and boost productivity.",
+        "price": 10,
+        "period": "yearly",
+        "tag": "New",
+        "tagType": "new",
+        "features": [
+            "Task tracking",
+            "Goal setting",
+            "Daily reminders"
+        ],
+        "icon": "../src/assets/products/design-tool.png"
+    }
+]

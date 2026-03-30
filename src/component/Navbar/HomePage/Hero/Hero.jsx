@@ -9,7 +9,7 @@ const Hero = () => {
             <div className="hero bg-base-200 min-h-screen">
                 <div className="hero-content flex-col lg:flex-row gap-15">
                     <div className='space-y-4'>
-                        <div className='flex items-center gap-[5px] bg-[#E1E7FF] w-fit px-4 py-2 rounded-full '>
+                        <div className='flex items-center gap-1.25 bg-[#E1E7FF] w-fit px-4 py-2 rounded-full '>
                             <div className='bg-purple-200 rounded-full'>
                                 <MdOutlineRadioButtonChecked className='text-purple-600' />
                             </div>
