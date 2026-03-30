@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { toast } from 'react-toastify';
 
 
 const Card = ({ product }) => {
@@ -6,7 +7,14 @@ const Card = ({ product }) => {
 
     const addToCart = () => {
         // alert(`Added ${product.name} to cart!`);
-        setIsAdded(true);
+        if(isAdded){
+            toast.error(`${product.name} is already in the cart!`);
+            return;
+        }
+        else{
+            setIsAdded(true);
+            toast.success(`${product.name} added to cart!`);
+        }
     }
 
     return (

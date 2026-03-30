@@ -1,7 +1,8 @@
 import React, { use, useState } from 'react';
 import Products from '../Products/Products';
+import Cart from '../Cart/Cart';
 
-const DigitalTools = ({ productsPromise }) => {
+const DigitalTools = ({ productsPromise, cartItems, setCartItems }) => {
     const [active, setActive] = useState("products");
 
     const products = use(productsPromise);
@@ -28,7 +29,7 @@ const DigitalTools = ({ productsPromise }) => {
                 </div>
 
                 <div className='mt-5'>
-                    {active === "products" ? <Products products={products} /> : <p>Cart</p>}
+                    {active === "products" ? <Products products={products} /> : <Cart cartItems={cartItems} />}
                 </div>
             </div>
         </div>
