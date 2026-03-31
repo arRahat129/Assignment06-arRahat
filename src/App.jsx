@@ -29,7 +29,18 @@ function App() {
     })
 
     setActiveProductId(product.id);
-  }
+  };
+
+  const handleRemoveFromCart = (productId) => {
+    const item = cartItems.find(item => item.id === productId);
+    if (!item) return;
+
+    setCartItems(currentItems => currentItems.filter(item => item.id !== productId));
+
+    if (activeProductId === productId) {
+      setActiveProductId(null);
+    }
+  };
 
   return (
     <>
@@ -43,7 +54,9 @@ function App() {
           setActive={setActive}
           cartItems={cartItems}
           activeProductId={activeProductId}
-          handleAddToCart={handleAddToCart} />
+          handleAddToCart={handleAddToCart}
+          handleRemoveFromCart={handleRemoveFromCart}
+          />
       </Suspense>
     </>
   )

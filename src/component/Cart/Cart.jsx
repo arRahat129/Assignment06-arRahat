@@ -1,7 +1,7 @@
 import React from 'react';
 import { IoCartOutline } from 'react-icons/io5';
 
-const Cart = ({ cartItems }) => {
+const Cart = ({ cartItems, handleRemoveFromCart }) => {
     let total = 0;
     cartItems.forEach(item => total += item.price);
 
@@ -35,7 +35,7 @@ const Cart = ({ cartItems }) => {
                                     <p className='text-gray-500'>${item.price.toFixed(2)}</p>
                                 </div>
                             </div>
-                            <button className='btn text-red-500'>Remove</button>
+                            <button onClick={() => handleRemoveFromCart(item.id)} className='btn text-red-500'>Remove</button>
                         </div>
                     </div>
                 ))}
