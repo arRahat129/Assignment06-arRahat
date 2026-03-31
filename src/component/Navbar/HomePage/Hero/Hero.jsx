@@ -15,8 +15,8 @@ const Hero = () => {
                             </div>
                             <p className='bg-linear-to-r from-[#4F39F6] to-[#9514FA] bg-clip-text text-transparent font-medium'>New: AI-Powered Tools Available</p>
                         </div>
-                        <h1 className="text-7xl font-bold line-height-[84px]">Supercharge Your Digital Workflow</h1>
-                        <p className="py-6 leading-8 max-w-160 text-[#627382] text-lg">
+                        <h1 className="text-3xl md:text-5xl lg:text-7xl font-bold leading-tight">Supercharge Your Digital Workflow</h1>
+                        <p className="py-4 md:py-6 leading-6 md:leading-8 max-w-160 text-[#627382] text-sm md:text-lg">
                             Access premium AI tools, design assets, templates, and productivity <br /> software—all in one place. Start creating faster today. <br /> Explore Products
                         </p>
                         <div className='flex gap-4'>
@@ -31,7 +31,7 @@ const Hero = () => {
                     </div>
                     <img
                         src={heroImage}
-                        className="max-w-sm rounded-lg shadow-2xl"
+                        className="w-full max-w-xs md:max-w-md lg:max-w-lg rounded-lg shadow-2xl"
                     />
                 </div>
             </div>

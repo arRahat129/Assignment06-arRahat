@@ -8,7 +8,7 @@ const Cart = ({ cartItems, handleRemoveFromCart, handleCheckout }) => {
     if (cartItems.length === 0) {
         return (
             <>
-                <div className='container mx-auto max-w-300 mt-10 mb-50 border border-gray-200 p-10 rounded-2xl'>
+                <div className='container mx-auto max-w-300 mt-10 mb-50 border border-gray-200 p-6 md:p-10 rounded-2xl space-y-5'>
                     <h5 className='text-start font-bold text-2xl'>Your Cart</h5>
                     <div className='space-y-4'>
                         <IoCartOutline className='size-20 text-gray-300 mx-auto mt-10' />
@@ -35,7 +35,7 @@ const Cart = ({ cartItems, handleRemoveFromCart, handleCheckout }) => {
                                     <p className='text-gray-500'>${item.price.toFixed(2)}</p>
                                 </div>
                             </div>
-                            <button onClick={() => handleRemoveFromCart(item.id)} className='btn text-red-500'>Remove</button>
+                            <button onClick={() => handleRemoveFromCart(item.id)} className='btn text-red-500 hover:bg-red-100 transition'>Remove</button>
                         </div>
                     </div>
                 ))}

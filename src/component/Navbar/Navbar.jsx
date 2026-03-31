@@ -33,7 +33,7 @@ const Navbar = ({ cartItems, setActive }) => {
                 </div>
                 <div className="navbar-end">
                     <div className='flex gap-4 items-center'>
-                        <div className='relative cursor-pointer' onClick={() => setActive("cart")}>
+                        <div className='relative cursor-pointer hover:scale-110 transition duration-200' onClick={() => setActive("cart")}>
                             {
                                 cartItems.length > 0 
                                     ? <span className='absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center'>{cartItems.length}</span>
@@ -42,7 +42,7 @@ const Navbar = ({ cartItems, setActive }) => {
                             <IoCartOutline className='text-2xl font-semibold text-[#101727]' />
                         </div>
                         <p className='font-semibold text-[#101727]'><a href="">Login</a></p>
-                        <a className="btn bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white rounded-full">Get Started</a>
+                        <a className="btn bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white rounded-full hover:opacity-90 transition duration-200">Get Started</a>
                     </div>
                 </div>
             </div>

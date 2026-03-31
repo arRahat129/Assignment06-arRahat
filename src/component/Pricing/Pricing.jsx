@@ -3,14 +3,14 @@ import React from 'react';
 const Pricing = () => {
     return (
         <>
-            <div className='container mx-auto max-w-400 mb-15 py-10'>
+            <div className='container mx-auto max-w-200 md:max-w-400 mb-15 py-10'>
                 <div className='space-y-4 mb-10 text-center'>
-                    <h1 className='text-5xl font-bold'>Simple, Transparent Pricing</h1>
+                    <h1 className='text-3xl md:text-5xl font-bold'>Simple, Transparent Pricing</h1>
                     <p className='text-[#627382]'>Choose the plan that fits your needs. Upgrade or downgrade anytime.</p>
                 </div>
-                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-5 lg:gap-6 mx-auto md:mx-0'>
 
-                    <div className="card w-96 bg-base-200 shadow-sm">
+                    <div className="card w-2/3 md:w-4/5 lg:w-96 mx-auto bg-base-200 shadow-lg hover:shadow-xl transition duration-100 hover:-translate-y-1">
                         <div className="card-body flex flex-col h-full">
                             <div className="">
                                 <h2 className="text-2xl font-bold">Starter</h2>
@@ -41,9 +41,9 @@ const Pricing = () => {
                         </div>
                     </div>
 
-                    <div className="card w-96 bg-base-100 shadow-sm">
+                    <div className="card w-2/3 md:w-4/5 lg:w-96 mx-auto bg-base-200 shadow-lg hover:shadow-xl transition duration-100 hover:-translate-y-1">
                         <div className="card-body flex flex-col h-full bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white rounded-2xl py-10 relative">
-                            <span className="badge text-xl bg-amber-200 text-amber-600 rounded-full p-5 absolute -top-5 left-28">Most Popular</span>
+                            <span className="badge text-xl bg-amber-200 text-amber-600 rounded-full p-5 absolute -top-5 left-2/6 md:left-20 lg:left-28">Most Popular</span>
                             <div className="">
                                 <h2 className="text-2xl font-bold">Pro</h2>
                                 <p className='mb-6'>Best for professionals</p>
@@ -82,7 +82,7 @@ const Pricing = () => {
                         </div>
                     </div>
 
-                    <div className="card w-96 bg-base-200 shadow-sm">
+                    <div className="card w-2/3 md:w-4/5 lg:w-96 mx-auto bg-base-200 shadow-lg hover:shadow-xl transition duration-100 hover:-translate-y-1">
                         <div className="card-body flex flex-col h-full">
                             <div className="">
                                 <h2 className="text-2xl font-bold">Enterprise</h2>

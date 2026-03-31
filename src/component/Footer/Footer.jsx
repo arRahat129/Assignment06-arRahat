@@ -5,11 +5,11 @@ const Footer = () => {
     return (
         <div className='container mx-auto max-w-400 mb-15'>
 
-            <div className="bg-[#0B1120] text-white pt-30 pb-6 px-50">
+            <div className="bg-[#0B1120] text-white pt-30 pb-6 px-5 md:px-10 lg:px-20 xl:px-50">
                 
                 <div className="space-y-10">
 
-                    <div className="grid grid-cols-1 md:grid-cols-6 gap-10 pb-10">
+                    <div className="grid grid-cols-1 md:grid-cols-6 text-center md:text-start gap-10 pb-10">
 
                         <div className="md:col-span-2 space-y-4">
                             <h2 className="text-3xl font-bold">DigiTools</h2>
@@ -51,7 +51,7 @@ const Footer = () => {
 
                         <div>
                             <h3 className="font-semibold mb-3">Social Links</h3>
-                            <div className="flex gap-3 mt-2">
+                            <div className="flex justify-center md:justify-start gap-3 mt-2">
                                 <div className="w-10 h-10 flex items-center justify-center bg-gray-200 text-black rounded-full hover:scale-110 transition cursor-pointer">
                                     <FaInstagram />
                                 </div>
