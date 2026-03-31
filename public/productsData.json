@@ -12,7 +12,7 @@
             "ATS optimization",
             "Export to PDF"
         ],
-        "icon": "../src/assets/products/design-tool.png"
+        "icon": "https://i.ibb.co.com/0yCB6V5P/Screenshot-2026-03-31-232319.png"
     },
     {
         "id": 2,
@@ -27,7 +27,7 @@
             "Custom domains",
             "SEO optimized"
         ],
-        "icon": "../src/assets/products/design-tool.png"
+        "icon": "https://i.ibb.co.com/LX7M51mx/Screenshot-2026-03-31-231539.png"
     },
     {
         "id": 3,
@@ -42,7 +42,7 @@
             "Analytics dashboard",
             "Multi-platform support"
         ],
-        "icon": "../src/assets/products/design-tool.png"
+        "icon": "https://i.ibb.co.com/XkN6jG1t/Screenshot-2026-03-31-231622.png"
     },
     {
         "id": 4,
@@ -57,7 +57,7 @@
             "Figma files",
             "Unlimited downloads"
         ],
-        "icon": "../src/assets/products/design-tool.png"
+        "icon": "https://i.ibb.co.com/gbfbXs3W/Screenshot-2026-03-31-231704.png"
     },
     {
         "id": 5,
@@ -72,7 +72,7 @@
             "Ad copy generation",
             "SEO suggestions"
         ],
-        "icon": "../src/assets/products/design-tool.png"
+        "icon": "https://i.ibb.co.com/Jw9pxKdx/Screenshot-2026-03-31-231738.png"
     },
     {
         "id": 6,
@@ -87,7 +87,7 @@
             "Automation flows",
             "Subscriber analytics"
         ],
-        "icon": "../src/assets/products/design-tool.png"
+        "icon": "https://i.ibb.co.com/p7v5MS6/Screenshot-2026-03-31-231800.png"
     },
     {
         "id": 7,
@@ -102,7 +102,7 @@
             "Pitch decks",
             "Legal docs"
         ],
-        "icon": "../src/assets/products/design-tool.png"
+        "icon": "https://i.ibb.co.com/wZsJkxBk/Screenshot-2026-03-31-231827.png"
     },
     {
         "id": 8,
@@ -117,6 +117,6 @@
             "Goal setting",
             "Daily reminders"
         ],
-        "icon": "../src/assets/products/design-tool.png"
+        "icon": "https://i.ibb.co.com/qMysf0rp/Screenshot-2026-03-31-231848.png"
     }
 ]
