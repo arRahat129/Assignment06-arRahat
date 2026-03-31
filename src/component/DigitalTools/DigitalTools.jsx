@@ -2,7 +2,7 @@ import React, { use } from 'react';
 import Products from '../Products/Products';
 import Cart from '../Cart/Cart';
 
-const DigitalTools = ({ productsPromise, active, setActive, cartItems, activeProductId, handleAddToCart, handleRemoveFromCart }) => {
+const DigitalTools = ({ productsPromise, active, setActive, cartItems, activeProductId, handleAddToCart, handleRemoveFromCart, handleCheckout }) => {
 
     const products = use(productsPromise);
     // console.log(products);
@@ -39,6 +39,7 @@ const DigitalTools = ({ productsPromise, active, setActive, cartItems, activePro
                         : <Cart
                             cartItems={cartItems}
                             handleRemoveFromCart={handleRemoveFromCart}
+                            handleCheckout={handleCheckout}
                             />
                     }
                 </div>

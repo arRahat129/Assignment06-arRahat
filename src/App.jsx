@@ -4,6 +4,7 @@ import Statistics from './component/Navbar/HomePage/Statistics/Statistics'
 import Navbar from './component/Navbar/Navbar'
 import DigitalTools from './component/DigitalTools/DigitalTools'
 import { Suspense, useState } from 'react'
+import { Bounce, toast } from 'react-toastify'
 
 const fetchProducts = async () => {
   const res = await fetch("/productsData.json");
@@ -36,11 +37,38 @@ function App() {
     if (!item) return;
 
     setCartItems(currentItems => currentItems.filter(item => item.id !== productId));
+    toast.error(`${item.name} has been removed from the cart`, {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+      transition: Bounce,
+    });
 
     if (activeProductId === productId) {
       setActiveProductId(null);
     }
   };
+
+  const handleCheckout = () => {
+    setCartItems([]);
+    setActiveProductId(null);
+    toast.success('Proceeded To Checkout', {
+      position: "top-center",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+      transition: Bounce,
+    });
+  }
 
   return (
     <>
@@ -48,7 +76,7 @@ function App() {
       <Hero />
       <Statistics />
       <Suspense fallback={<span className="loading loading-spinner loading-xl flex justify-center"></span>}>
-        <DigitalTools 
+        <DigitalTools
           productsPromise={productsPromise}
           active={active}
           setActive={setActive}
@@ -56,7 +84,8 @@ function App() {
           activeProductId={activeProductId}
           handleAddToCart={handleAddToCart}
           handleRemoveFromCart={handleRemoveFromCart}
-          />
+          handleCheckout={handleCheckout}
+        />
       </Suspense>
     </>
   )
