@@ -1,16 +1,36 @@
-# React + Vite
+# Digital Tool Platform Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description:
 
-Currently, two official plugins are available:
+    I tried to create a Digital Tool website based on the given requirement that contains a fully responsive and functional Digital Tool Platform.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+    In this website, user can see some tools as products. They can add products to cart. See the cart containing the selected products and the sum of products price. and then checkout the products. 
 
-## React Compiler
+    I tried to place some hover and active effects and toast notification trying to make it a little bit attractive to the users.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Technologies Used
 
-## Expanding the ESLint configuration
+    To create this platform, I used the following technologies:
+    
+    * React.js
+    * Tailwind CSS
+    * DaisyUI
+    * JavaScript (ES6+)
+    * React Toastify (NPM Package)
+    * JSON (for product data)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Key Features
+
+* User can add products to cart and remove product from cart and also proceed the checkout
+
+* User can toggle between Products section and cart section. 
+
+* User can see how many Items are in the cart. It is shown beside toggle cart button and over Navbar cart Icon
+
+<br>
+<br>
+
+# AUTHOR
+### **Mohammad Ashikur Rahman**
+### Email: rahashik129@gmail.com
+### Contact: 01833879528
