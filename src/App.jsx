@@ -5,6 +5,10 @@ import Navbar from './component/Navbar/Navbar'
 import DigitalTools from './component/DigitalTools/DigitalTools'
 import { Suspense, useState } from 'react'
 import { Bounce, toast } from 'react-toastify'
+import Steps from './component/Steps/Steps'
+import Pricing from './component/Pricing/Pricing'
+import TransformWorkflow from './component/TransformWorkflow/TransformWorkflow'
+import Footer from './component/Footer/Footer'
 
 const fetchProducts = async () => {
   const res = await fetch("/productsData.json");
@@ -87,6 +91,11 @@ function App() {
           handleCheckout={handleCheckout}
         />
       </Suspense>
+
+      <Steps />
+      <Pricing />
+      <TransformWorkflow />
+      <Footer />
     </>
   )
 }
